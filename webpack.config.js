@@ -30,7 +30,7 @@ module.exports = function makeWebpackConfig () {
    * Karma will set this when it's a test build
    */
   config.entry = isTest ? {} : {
-    app: './src/app/app.js'
+    app: './src/app/main.js'
   };
 
   /**
@@ -101,7 +101,12 @@ module.exports = function makeWebpackConfig () {
       // Reference: https://github.com/webpack/style-loader
       // Use style-loader in development.
       loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
-    }, {
+    }, 
+    {
+        test: /\.less$/,
+        loader: "style!css!less"
+    },
+    {
       // ASSET LOADER
       // Reference: https://github.com/webpack/file-loader
       // Copy png, jpg, jpeg, gif, svg, woff, woff2, ttf, eot files to output
