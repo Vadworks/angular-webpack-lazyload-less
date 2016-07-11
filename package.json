@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
   "dependencies": {
-    "lodash": "^3.5.0",
     "angular": "^1.5.0",
+    "angular-cache": "^4.6.0",
+    "angular-resource": "^1.5.5",
     "angular-ui-router": "~0.2.13",
+    "lodash": "^3.5.0",
     "oclazyload": "~0.6.3"
   },
   "devDependencies": {
